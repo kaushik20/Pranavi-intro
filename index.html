@@ -1,168 +1,377 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="description" content="Join us for Pranavi's Arangetram, a celebration of her Kuchipudi journey. Event details, RSVP, and gallery.">
-  <meta name="keywords" content="Arangetram, Kuchipudi, Indian Classical Dance, Pranavi, Dance Performance, Cultural Event">
-  <meta name="author" content="Pranavi">
-  <meta property="og:title" content="Pranavi's Arangetram Celebration" />
-  <meta property="og:description" content="Celebrate Pranavi's Kuchipudi debut with us. RSVP and explore her dance journey." />
-  <meta property="og:url" content="https://pranavi-arangetram.github.io/" />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="./Images/sister-hero.jpg" />
-  <title>Pranavi - Arangetram Celebration</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  <style>
-    /* same CSS styles preserved from your original */
-  </style>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+   <meta name="description" content="Join us for Priya's Arangetram, a celebration of her Bharatanatyam journey. Event details, RSVP, and gallery.">
+   <meta name="keywords" content="Arangetram, Bharatanatyam, Indian Classical Dance, Priya, Dance Performance, Cultural Event">
+   <meta name="author" content="Priya">
+   <meta property="og:title" content="Priya's Arangetram Celebration" />
+   <meta property="og:description" content="Celebrate Priya's Bharatanatyam debut with us. RSVP and explore her dance journey." />
+   <meta property="og:url" content="https://priya-arangetram.github.io/" />
+   <meta property="og:type" content="website" />
+   <meta property="og:image" content="./Images/sister-hero.jpg" />
+   <title>Pranavi - Arangetram Celebration</title>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+   <style>
+      :root {
+         --bg-color: #fffaf0;
+         --text-color: #2c0b0e;
+         --hero-bg: linear-gradient(135deg, #8b0000, #ffd700);
+         --card-bg: linear-gradient(135deg, #228b22, #ffd700);
+         --button-bg: #8b0000;
+         --button-hover: #a52a2a;
+         --progress-bg: #f5e6cc;
+         --progress-fill: linear-gradient(135deg, #228b22, #ffd700);
+         --footer-bg-dark: #2c0b0e;
+         --footer-text-dark: #fffaf0;
+         --header-bg: rgba(44, 11, 14, 0.9);
+         --header-scrolled-bg: rgba(44, 11, 14, 0.95);
+         --animation-duration: 0.3s;
+      }
+      [data-theme="light"] {
+         --bg-color: #ffffff;
+         --text-color: #2c0b0e;
+         --hero-bg: linear-gradient(135deg, #228b22, #ffd700);
+         --card-bg: linear-gradient(135deg, #8b0000, #ffd700);
+         --button-bg: #228b22;
+         --button-hover: #006400;
+         --progress-bg: #f0f0f0;
+         --progress-fill: linear-gradient(135deg, #8b0000, #ffd700);
+         --header-bg: #ffffff;
+         --header-scrolled-bg: #ffffff;
+         --footer-bg-dark: #f5e6cc;
+         --footer-text-dark: #2c0b0e;
+      }
+      html, body {
+         font-family: 'Lora', serif;
+         background: var(--bg-color);
+         color: var(--text-color);
+         margin: 0;
+         padding: 0;
+         overflow-x: hidden;
+         scroll-behavior: smooth;
+      }
+      header {
+         position: sticky;
+         top: 0;
+         width: 100%;
+         height: 60px;
+         background: var(--header-bg);
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         z-index: 1000;
+         padding: 0 2rem;
+         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      }
+      header.scrolled {
+         background: var(--header-scrolled-bg);
+         height: 50px;
+      }
+      header .logo img {
+         height: 50px;
+         transition: transform var(--animation-duration) ease;
+      }
+      header .logo img:hover {
+         transform: scale(1.05);
+      }
+      header .nav-links {
+         display: flex;
+         gap: 15px;
+      }
+      header .nav-links .nav-item {
+         color: var(--text-color);
+         text-decoration: none;
+         font-size: 1rem;
+         padding: 0.5rem 1rem;
+         border-radius: 5px;
+         transition: background-color var(--animation-duration) ease;
+      }
+      header .nav-links .nav-item:hover, header .nav-links .nav-item.active {
+         background: var(--button-bg);
+         color: var(--bg-color);
+      }
+      #hero {
+         text-align: center;
+         padding: 2rem;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         height: 100vh;
+         background: var(--hero-bg);
+         background-size: 400% 400%;
+         animation: gradientAnimation 10s ease infinite;
+      }
+      #hero h1 {
+         font-size: 2.5rem;
+         color: var(--text-color);
+         margin-bottom: 1rem;
+      }
+      #hero p {
+         font-size: 1.2rem;
+         color: #fffaf0;
+         margin-bottom: 1.5rem;
+      }
+      .cta-btn {
+         padding: 0.8rem 2rem;
+         background: var(--button-bg);
+         color: #fffaf0;
+         text-decoration: none;
+         border-radius: 8px;
+         font-size: 1.2rem;
+         transition: background-color 0.3s ease, transform 0.2s ease;
+      }
+      .cta-btn:hover {
+         background: var(--button-hover);
+         transform: scale(1.05);
+      }
+      .section {
+         padding: 3rem 1rem;
+         text-align: center;
+         background: var(--bg-color);
+         color: var(--text-color);
+      }
+      .section h2 {
+         font-size: 2.5rem;
+         margin-bottom: 1rem;
+         color: var(--button-bg);
+      }
+      .section-subtitle {
+         font-size: 1.2rem;
+         color: var(--text-color);
+         margin-bottom: 2rem;
+         opacity: 0.8;
+      }
+      .gallery-grid {
+         display: grid;
+         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+         gap: 1.5rem;
+      }
+      .gallery-item {
+         background: var(--card-bg);
+         padding: 1rem;
+         border-radius: 8px;
+         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+         transition: transform 0.3s ease;
+      }
+      .gallery-item img {
+         width: 100%;
+         border-radius: 8px;
+      }
+      .gallery-item:hover {
+         transform: scale(1.05);
+      }
+      .badge-container {
+         display: none;
+         position: fixed;
+         bottom: 20px;
+         right: 20px;
+         background: var(--card-bg);
+         color: #fffaf0;
+         border-radius: 12px;
+         padding: 1.5rem;
+         box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+         z-index: 1000;
+      }
+      .badge-content {
+         text-align: center;
+      }
+      .badge-title {
+         font-size: 1.5rem;
+         margin-bottom: 0.5rem;
+      }
+      .badge-message {
+         font-size: 1rem;
+      }
+      footer {
+         background: var(--footer-bg-dark);
+         color: var(--footer-text-dark);
+         padding: 2rem 1rem;
+         text-align: center;
+      }
+      .contact-items {
+         display: flex;
+         flex-direction: column;
+         gap: 1rem;
+      }
+      .contact-item a {
+         color: var(--footer-text-dark);
+         text-decoration: none;
+         font-size: 1.1rem;
+      }
+      .contact-item a:hover {
+         color: var(--button-bg);
+      }
+      @keyframes gradientAnimation {
+         0% { background-position: 0% 50%; }
+         50% { background-position: 100% 50%; }
+         100% { background-position: 0% 50%; }
+      }
+      @keyframes badgeAppear {
+         from { opacity: 0; transform: scale(0.5); }
+         to { opacity: 1; transform: scale(1); }
+      }
+      @media (max-width: 768px) {
+         header .nav-links {
+            flex-direction: column;
+            gap: 10px;
+         }
+         .gallery-grid {
+            grid-template-columns: 1fr;
+         }
+      }
+   </style>
 </head>
 <body>
-  <header>
-    <div class="logo">
-      <a href="#hero">
-        <img src="./Images/arangetram-logo.png" alt="Pranavi Arangetram Logo">
-      </a>
-    </div>
-    <nav class="nav-links">
-      <a href="#hero" class="nav-item">Home</a>
-      <a href="#about" class="nav-item">About</a>
-      <a href="#event" class="nav-item">Event Details</a>
-      <a href="#gallery" class="nav-item">Gallery</a>
-      <a href="#rsvp" class="nav-item">RSVP</a>
-      <a href="#guestbook" class="nav-item">Guestbook</a>
-    </nav>
-  </header>
-  <main>
-    <section id="hero">
-      <div style="display: flex; align-items: center; justify-content: center; padding: 2rem;">
-        <div style="flex-shrink: 0; text-align: center;">
-          <img src="./Images/sister-hero.jpg" alt="Pranavi in Kuchipudi attire" style="width: 200px; height: 200px; border-radius: 50%; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); margin-right: 2rem;">
-        </div>
-        <div style="max-width: 600px; text-align: left;">
-          <h1>Welcome to Sri Pranavi Chintalapudi's Arangetram</h1>
-          <p>Join us in celebrating Sri Pranavi Chintalapudi's Kuchipudi debut, a milestone in her journey of devotion and talent. Witness the storytelling and rhythm of this classical art form.</p>
-          <div style="display: flex; gap: 1rem; margin-top: 2rem;">
-            <a href="#rsvp" class="cta-btn">RSVP Now</a>
-            <a href="#event" class="cta-btn">Event Details</a>
-          </div>
-        </div>
+   <header>
+      <div class="logo">
+         <a href="#hero">
+            <img src="./Images/arangetram-logo.png" alt="Priya Arangetram Logo">
+         </a>
       </div>
-    </section>
-    <section id="about" class="section">
-      <h2>About Pranavi</h2>
-      <p class="section-subtitle">Her journey in Kuchipudi</p>
-      <p>Pranavi began her Kuchipudi training 8 years ago under the tutelage of Guru <strong>Smt. Preethi Tatambhotla</strong>. Over the years, she has graced cultural and devotional stages across India and the UAE, including iconic venues like Tirumala, Guruvayur, and Chidambaram. Her dedication to classical dance is a blend of discipline, devotion, and sheer passion.</p>
-      <div id="badge-container-about" class="badge-container">
-        <div class="badge-content">
-          <h3 class="badge-title">Welcome Badge</h3>
-          <p class="badge-message">You've unlocked the Welcome Badge!</p>
-        </div>
+      <nav class="nav-links">
+         <a href="#hero" class="nav-item">Home</a>
+         <a href="#about" class="nav-item">About</a>
+         <a href="#event" class="nav-item">Event Details</a>
+         <a href="#gallery" class="nav-item">Gallery</a>
+         <a href="#rsvp" class="nav-item">RSVP</a>
+         <a href="#guestbook" class="nav-item">Guestbook</a>
+      </nav>
+   </header>
+   <main>
+      <section id="hero">
+         <div style="display: flex; align-items: center; justify-content: center; padding: 2rem;">
+            <div style="flex-shrink: 0; text-align: center;">
+               <img src="./Images/sister-hero.jpg" alt="Priya in Bharatanatyam attire during practice" style="width: 200px; height: 200px; border-radius: 50%; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); margin-right: 2rem;">
+            </div>
+            <div style="max-width: 600px; text-align: left;">
+               <h1>Welcome to Sri Pranavi Chintalapudi's Arangetram</h1>
+               <p>Join us in celebrating Sri Pranavi Chintalapudi's Kuchipudi debut, a milestone in her journey of dedication and artistry. Witness the grace and storytelling of this ancient Indian dance form.</p>
+               <div style="display: flex; gap: 1rem; margin-top: 2rem;">
+                  <a href="#rsvp" class="cta-btn">RSVP Now</a>
+                  <a href="#event" class="cta-btn">Event Details</a>
+               </div>
+            </div>
+         </div>
+      </section>
+      <section id="about" class="section">
+         <h2>About Priya</h2>
+         <p class="section-subtitle">Her journey in Kuchipudi</p>
+         <p>Priya began her Bharatanatyam training at the age of 6 under the guidance of Guru Smt. Lakshmi Iyer. Her passion for dance has grown over 10 years, culminating in this Arangetram, a testament to her discipline and artistry. Bharatanatyam, with its intricate footwork and expressive storytelling, has shaped her into a dedicated performer.</p>
+         <div id="badge-container-about" class="badge-container">
+            <div class="badge-content">
+               <h3 class="badge-title">Welcome Badge</h3>
+               <p class="badge-message">You've unlocked the Welcome Badge!</p>
+            </div>
+         </div>
+      </section>
+      <section id="event" class="section">
+         <h2>Event Details</h2>
+         <p class="section-subtitle">Join us for this special occasion</p>
+         <p><strong>Date:</strong> July 15, 2025<br>
+            <strong>Time:</strong> 6:00 PM IST<br>
+            <strong>Venue:</strong> Kalakshetra Auditorium, Chennai, Tamil Nadu<br>
+            <strong>Dress Code:</strong> Traditional or Formal<br>
+            <strong>Performance By:</strong> Priya<br>
+            <strong>Guru:</strong> Smt. Lakshmi Iyer</p>
+         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.998123456789!2d80.240438!3d13.033689!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5267d47c6f6e8f%3A0x1f0eabf0f7f0d4a!2sKalakshetra%20Foundation!5e0!3m2!1sen!2sin!4v1697500000000!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+         <div id="badge-container-event" class="badge-container">
+            <div class="badge-content">
+               <h3 class="badge-title">Event Explorer Badge</h3>
+               <p class="badge-message">You've unlocked the Event Explorer Badge!</p>
+            </div>
+         </div>
+      </section>
+      <section id="gallery" class="section">
+         <h2>Gallery</h2>
+         <p class="section-subtitle">Moments from Priya's dance journey</p>
+         <div class="gallery-grid">
+            <div class="gallery-item">
+               <img src="./Images/dance-practice1.jpg" alt="Priya practicing at the dance studio">
+            </div>
+            <div class="gallery-item">
+               <img src="./Images/dance-practice2.jpg" alt="Priya in costume during a rehearsal">
+            </div>
+            <div class="gallery-item">
+               <img src="./Images/dance-performance.jpg" alt="Priya performing on stage">
+            </div>
+         </div>
+         <div id="badge-container-gallery" class="badge-container">
+            <div class="badge-content">
+               <h3 class="badge-title">Gallery Viewer Badge</h3>
+               <p class="badge-message">You've unlocked the Gallery Viewer Badge!</p>
+            </div>
+         </div>
+      </section>
+      <section id="rsvp" class="section">
+         <h2>RSVP</h2>
+         <p class="section-subtitle">Let us know you're coming!</p>
+         <p>Please confirm your attendance by filling out the form below. We look forward to celebrating with you!</p>
+         <a href="https://forms.gle/example-rsvp-form" target="_blank" class="cta-btn">Submit RSVP</a>
+         <div id="badge-container-rsvp" class="badge-container">
+            <div class="badge-content">
+               <h3 class="badge-title">RSVP Badge</h3>
+               <p class="badge-message">You've unlocked the RSVP Badge!</p>
+            </div>
+         </div>
+      </section>
+      <section id="guestbook" class="section">
+         <h2>Guestbook</h2>
+         <p class="section-subtitle">Leave a message for Priya</p>
+         <p>Share your wishes and thoughts for Priya's Arangetram. Your messages will be cherished!</p>
+         <a href="https://forms.gle/example-guestbook-form" target="_blank" class="cta-btn">Write a Message</a>
+         <div id="badge-container-guestbook" class="badge-container">
+            <div class="badge-content">
+               <h3 class="badge-title">Guestbook Contributor Badge</h3>
+               <p class="badge-message">You've unlocked the Guestbook Contributor Badge!</p>
+            </div>
+         </div>
+      </section>
+   </main>
+   <footer>
+      <div class="contact-items">
+         <div class="contact-item">
+            <a href="https://wa.me/1234567890" target="_blank">Contact via WhatsApp</a>
+         </div>
+         <div class="contact-item">
+            <a href="mailto:priya.arangetram@example.com" target="_blank">priya.arangetram@example.com</a>
+         </div>
       </div>
-    </section>
-    <section id="event" class="section">
-      <h2>Event Details</h2>
-      <p class="section-subtitle">Join us for this special occasion</p>
-      <p><strong>Date:</strong> August 25, 2025<br>
-        <strong>Time:</strong> 6:00 PM IST<br>
-        <strong>Venue:</strong> Ravindra Bharathi Auditorium, Hyderabad<br>
-        <strong>Dress Code:</strong> Traditional or Formal<br>
-        <strong>Performance By:</strong> Pranavi Chintalapudi<br>
-        <strong>Guru:</strong> Smt. Preethi Tatambhotla</p>
-      <iframe src="https://www.google.com/maps?q=Ravindra+Bharathi+Auditorium,Hyderabad&output=embed" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-      <div id="badge-container-event" class="badge-container">
-        <div class="badge-content">
-          <h3 class="badge-title">Event Explorer Badge</h3>
-          <p class="badge-message">You've unlocked the Event Explorer Badge!</p>
-        </div>
-      </div>
-    </section>
-    <section id="gallery" class="section">
-      <h2>Gallery</h2>
-      <p class="section-subtitle">Moments from Pranavi's dance journey</p>
-      <div class="gallery-grid">
-        <div class="gallery-item"><img src="./Images/20250323_125010.jpg" alt="Temple pose 1"></div>
-        <div class="gallery-item"><img src="./Images/20250419_194643.jpg" alt="Award Ceremony"></div>
-        <div class="gallery-item"><img src="./Images/IMG-20250519-WA0003.jpg" alt="Stage backdrop"></div>
-        <div class="gallery-item"><img src="./Images/20250323_124923.jpg" alt="Temple pose 2"></div>
-        <div class="gallery-item"><img src="./Images/20250323_125001.jpg" alt="Temple pose 3"></div>
-        <div class="gallery-item"><img src="./Images/IMG-20250530-WA0006.jpg" alt="Group photo"></div>
-      </div>
-      <div id="badge-container-gallery" class="badge-container">
-        <div class="badge-content">
-          <h3 class="badge-title">Gallery Viewer Badge</h3>
-          <p class="badge-message">You've unlocked the Gallery Viewer Badge!</p>
-        </div>
-      </div>
-    </section>
-    <section id="rsvp" class="section">
-      <h2>RSVP</h2>
-      <p class="section-subtitle">Let us know you're coming!</p>
-      <p>Please confirm your attendance by filling out the form below. We look forward to celebrating with you!</p>
-      <a href="https://forms.gle/example-rsvp-form" target="_blank" class="cta-btn">Submit RSVP</a>
-      <div id="badge-container-rsvp" class="badge-container">
-        <div class="badge-content">
-          <h3 class="badge-title">RSVP Badge</h3>
-          <p class="badge-message">You've unlocked the RSVP Badge!</p>
-        </div>
-      </div>
-    </section>
-    <section id="guestbook" class="section">
-      <h2>Guestbook</h2>
-      <p class="section-subtitle">Leave a message for Pranavi</p>
-      <p>Share your wishes and thoughts for Pranavi’s Arangetram. Your blessings mean a lot!</p>
-      <a href="https://forms.gle/example-guestbook-form" target="_blank" class="cta-btn">Write a Message</a>
-      <div id="badge-container-guestbook" class="badge-container">
-        <div class="badge-content">
-          <h3 class="badge-title">Guestbook Contributor Badge</h3>
-          <p class="badge-message">You've unlocked the Guestbook Contributor Badge!</p>
-        </div>
-      </div>
-    </section>
-  </main>
-  <footer>
-    <div class="contact-items">
-      <div class="contact-item">
-        <a href="https://wa.me/919999999999" target="_blank">Contact via WhatsApp</a>
-      </div>
-      <div class="contact-item">
-        <a href="mailto:pranavi.arangetram@example.com" target="_blank">pranavi.arangetram@example.com</a>
-      </div>
-    </div>
-    <p>© <span id="current-year"></span> Pranavi’s Arangetram. Crafted with love for a memorable celebration.</p>
-  </footer>
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      document.getElementById('current-year').textContent = new Date().getFullYear();
-      document.querySelectorAll("header .nav-links a").forEach(link => {
-        link.addEventListener("click", (e) => {
-          e.preventDefault();
-          const target = document.getElementById(link.getAttribute("href").substring(1));
-          target.scrollIntoView({ behavior: "smooth" });
-        });
+      <p>© <span id="current-year"></span> Priya's Arangetram. Crafted with love for a memorable celebration.</p>
+   </footer>
+   <script>
+      document.addEventListener("DOMContentLoaded", () => {
+         document.getElementById('current-year').textContent = new Date().getFullYear();
+         document.querySelectorAll("header .nav-links a").forEach(link => {
+            link.addEventListener("click", (e) => {
+               e.preventDefault();
+               const target = document.getElementById(link.getAttribute("href").substring(1));
+               target.scrollIntoView({ behavior: "smooth" });
+            });
+         });
+         const sectionsToGamify = [
+            { id: "about", itemsClass: ".section", badgeId: "badge-container-about" },
+            { id: "event", itemsClass: ".section", badgeId: "badge-container-event" },
+            { id: "gallery", itemsClass: ".gallery-item", badgeId: "badge-container-gallery" },
+            { id: "rsvp", itemsClass: ".section", badgeId: "badge-container-rsvp" },
+            { id: "guestbook", itemsClass: ".section", badgeId: "badge-container-guestbook" }
+         ];
+         sectionsToGamify.forEach(({ id, itemsClass, badgeId }) => {
+            const section = document.getElementById(id);
+            const badgeContainer = document.getElementById(badgeId);
+            section.addEventListener("click", () => {
+               if (!badgeContainer.classList.contains("unlocked")) {
+                  badgeContainer.classList.add("unlocked");
+                  badgeContainer.style.display = "block";
+                  badgeContainer.animate([
+                     { transform: "scale(0.5)", opacity: 0 },
+                     { transform: "scale(1)", opacity: 1 }
+                  ], { duration: 1000, easing: "ease-out" });
+               }
+            });
+         });
       });
-      const sectionsToGamify = [
-        { id: "about", itemsClass: ".section", badgeId: "badge-container-about" },
-        { id: "event", itemsClass: ".section", badgeId: "badge-container-event" },
-        { id: "gallery", itemsClass: ".gallery-item", badgeId: "badge-container-gallery" },
-        { id: "rsvp", itemsClass: ".section", badgeId: "badge-container-rsvp" },
-        { id: "guestbook", itemsClass: ".section", badgeId: "badge-container-guestbook" }
-      ];
-      sectionsToGamify.forEach(({ id, itemsClass, badgeId }) => {
-        const section = document.getElementById(id);
-        const badgeContainer = document.getElementById(badgeId);
-        section.addEventListener("click", () => {
-          if (!badgeContainer.classList.contains("unlocked")) {
-            badgeContainer.classList.add("unlocked");
-            badgeContainer.style.display = "block";
-            badgeContainer.animate([
-              { transform: "scale(0.5)", opacity: 0 },
-              { transform: "scale(1)", opacity: 1 }
-            ], { duration: 1000, easing: "ease-out" });
-          }
-        });
-      });
-    });
-  </script>
+   </script>
 </body>
 </html>
