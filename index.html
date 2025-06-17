@@ -1,121 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pranavi | Kuchipudi | Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pranavi Chintalapudi | Kuchipudi Portfolio</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    body { scroll-behavior: smooth; }
+    body {
+      scroll-behavior: smooth;
+    }
     .hero {
-      background: url('hero-bg.jpg') center/cover no-repeat;
-      height: 100vh;
-      position: relative;
-    }
-    .hero::before {
-      content:""; position:absolute; inset:0;
-      background:rgba(0,0,0,0.4);
-    }
-    .hero-content {
-      position:relative; z-index:1;
+      background: url('hero.jpg') center/cover no-repeat;
     }
     .gallery img {
-      transition: transform .3s;
+      transition: transform 0.3s;
     }
     .gallery img:hover {
       transform: scale(1.05);
-      filter: brightness(1.1);
     }
   </style>
 </head>
-<body class="text-gray-900 font-sans">
+<body class="bg-white text-gray-900">
+  <!-- Background Music -->
+  <audio autoplay loop hidden>
+    <source src="music.mp3" type="audio/mp3">
+  </audio>
 
-  <!-- NAVBAR -->
-  <nav class="fixed top-0 w-full bg-white bg-opacity-70 backdrop-blur z-10">
-    <div class="max-w-5xl mx-auto flex justify-between items-center p-4">
-      <a href="#hero" class="text-2xl font-bold text-rose-600">Pranavi</a>
-      <div class="space-x-6">
-        <a href="#about" class="hover:text-rose-600">About</a>
-        <a href="#arts" class="hover:text-rose-600">Artistry</a>
-        <a href="#gallery" class="hover:text-rose-600">Gallery</a>
-        <a href="#contact" class="hover:text-rose-600">Celebrate</a>
-      </div>
-    </div>
-  </nav>
-
-  <!-- HERO -->
-  <section id="hero" class="hero flex items-center justify-center">
-    <div class="hero-content text-center text-white px-4">
-      <h1 class="text-5xl md:text-7xl font-bold mb-4 animate-fadeIn">Sri Pranavi Chintalapudi</h1>
-      <p class="text-xl md:text-2xl mb-8 animate-fadeIn delay-1">Kuchipudi Dancer | Rangapravesam Aug 2025</p>
-      <a href="#contact" class="px-8 py-3 bg-rose-500 hover:bg-rose-600 rounded-full font-medium transition animate-fadeIn delay-2">RSVP / Celebrate</a>
-    </div>
+  <!-- Hero Section -->
+  <section class="hero h-screen flex flex-col justify-center items-center text-white text-center px-4" style="background-color: rgba(0,0,0,0.4); background-blend-mode: overlay;">
+    <h1 class="text-5xl md:text-7xl font-bold mb-4">Sri Pranavi Chintalapudi</h1>
+    <p class="text-xl md:text-2xl">Rangapravesam | August 2025</p>
+    <a href="#rsvp" class="mt-6 inline-block px-6 py-3 bg-rose-600 hover:bg-rose-700 rounded-full text-lg font-medium">Celebrate with Us</a>
   </section>
 
-  <!-- ABOUT -->
-  <section id="about" class="py-16 bg-gray-50">
-    <div class="max-w-4xl mx-auto px-4">
-      <h2 class="text-4xl font-bold text-center mb-8">About Me</h2>
-      <p class="leading-relaxed mb-6">
-        I’m a seasoned Kuchipudi dancer with 8+ years of training under <strong>Smt. Preethi Tatambhotla</strong>. I've graced sacred stages like Tirumala, Guruvayur, and Chidambaram, and performed internationally across the UAE & USA.
-      </p>
-      <p class="leading-relaxed">
-        Winner of 1st Prize at the Virtual International Competition (Spring Nectar Foundation, USA), Shobha Naidu Awards, and Gold Medal at Indywood Talent Hunt International 2021. Featured in lead roles for ballets by Tanmayi Art Studio.
-      </p>
-    </div>
+  <!-- About Section -->
+  <section id="about" class="py-16 px-4 max-w-4xl mx-auto">
+    <h2 class="text-4xl font-bold mb-6 text-center">About</h2>
+    <p class="text-lg leading-relaxed">
+      Pranavi Chintalapudi is a passionate Kuchipudi dancer trained under Smt. Preethi Tatambhotla. With performances at revered venues such as Tirumala, Guruvayur, Chidambaram, and international stages, she has upheld the elegance of classical Indian dance. She is a recipient of top awards including the 1st Prize in the Spring Nectar International Competition and the Indywood Talent Hunt Gold Medal. She's currently pursuing Engineering at BITS Pilani, Dubai Campus.
+    </p>
   </section>
 
-  <!-- ARTISTRY -->
-  <section id="arts" class="py-16">
-    <div class="max-w-4xl mx-auto px-4">
-      <h2 class="text-4xl font-bold text-center mb-8">Artistry & Achievements</h2>
-      <ul class="list-disc list-inside space-y-3 leading-relaxed">
-        <li>🎓 Engineering student at BITS Pilani, Dubai after schooling at GEMS Dubai</li>
-        <li>🎵 Trained in Carnatic vocal music (trained under Smt. Gayatri Sriram, Poornima Rao, Prema Iyer)</li>
-        <li>🎻 Carnatic violin under Mr. Subramaniyam; 3rd Prize at Margazhi Utsavam</li>
-        <li>📜 Sanskrit scholar through Samskritha Bharathi Institute — cleared Pravesha & Parichaya Patralaya</li>
+  <!-- Achievements Section -->
+  <section id="achievements" class="bg-gray-50 py-16 px-4">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-4xl font-bold mb-6 text-center">Achievements</h2>
+      <ul class="list-disc space-y-3 text-lg">
+        <li>1st Prize – Spring Nectar Foundation (USA)</li>
+        <li>Gold Medal – Indywood Talent Hunt (UAE)</li>
+        <li>2nd Prize – Shobha Naidu Awards</li>
+        <li>Lead roles – Kalyana Srinivasam, Navarasa Natabhamini ballets</li>
+        <li>Certified in Carnatic vocal and violin with multiple awards</li>
       </ul>
     </div>
   </section>
 
-  <!-- GALLERY -->
-  <section id="gallery" class="py-16 bg-gray-50">
-    <div class="max-w-5xl mx-auto px-4">
+  <!-- Gallery Section -->
+  <section id="gallery" class="py-16 px-4">
+    <div class="max-w-6xl mx-auto">
       <h2 class="text-4xl font-bold text-center mb-8">Gallery</h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 gallery">
-        <img src="gallery/1.jpg" alt="Performance 1" class="rounded-lg"/>
-        <img src="gallery/2.jpg" alt="Performance 2" class="rounded-lg"/>
-        <img src="gallery/3.jpg" alt="Performance 3" class="rounded-lg"/>
-        <img src="gallery/4.jpg" alt="Performance 4" class="rounded-lg"/>
-        <img src="gallery/5.jpg" alt="Performance 5" class="rounded-lg"/>
-        <img src="gallery/6.jpg" alt="Performance 6" class="rounded-lg"/>
+        <img src="gallery1.jpg" alt="Gallery 1" class="rounded-lg shadow-md">
+        <img src="gallery2.jpg" alt="Gallery 2" class="rounded-lg shadow-md">
+        <img src="gallery3.jpg" alt="Gallery 3" class="rounded-lg shadow-md">
+        <img src="gallery4.jpg" alt="Gallery 4" class="rounded-lg shadow-md">
+        <img src="gallery5.jpg" alt="Gallery 5" class="rounded-lg shadow-md">
+        <img src="gallery6.jpg" alt="Gallery 6" class="rounded-lg shadow-md">
       </div>
     </div>
   </section>
 
-  <!-- CONTACT/RVSP -->
-  <section id="contact" class="py-16">
-    <div class="max-w-3xl mx-auto px-4 text-center">
-      <h2 class="text-4xl font-bold mb-6">Celebrate With Us</h2>
-      <p class="mb-6">Come witness Pranavi’s Rangapravesam — an evening of grace, dedication, and artistry. RSVP now!</p>
-      <a href="https://forms.gle/your-rsvp-form" target="_blank" class="px-8 py-3 bg-rose-600 hover:bg-rose-700 text-white rounded-full font-medium transition">RSVP Here</a>
-    </div>
+  <!-- RSVP / Contact Section -->
+  <section id="rsvp" class="bg-rose-50 py-16 px-4 text-center">
+    <h2 class="text-4xl font-bold mb-6">Join the Celebration</h2>
+    <p class="text-lg mb-4">We warmly invite you to witness Pranavi’s Rangapravesam.</p>
+    <a href="https://forms.gle/your-form-link" target="_blank" class="px-6 py-3 bg-rose-600 hover:bg-rose-700 text-white text-lg rounded-full font-semibold">RSVP Now</a>
   </section>
 
-  <!-- FOOTER -->
-  <footer class="py-6 bg-gray-100 text-center">
-    <p>&copy; 2025 Sri Pranavi Chintalapudi</p>
+  <!-- Footer with Venue/Date -->
+  <footer class="bg-gray-900 text-white text-center py-6">
+    <p class="text-lg">📍 Venue: Ravindra Bharathi Auditorium, Hyderabad</p>
+    <p class="text-lg">🗓️ Date: August 25, 2025 | 6:00 PM Onwards</p>
+    <p class="text-sm mt-2">&copy; 2025 Pranavi Chintalapudi. All rights reserved.</p>
   </footer>
-
-  <script>
-    // subtle fadeIn on scroll
-    const els = document.querySelectorAll('.animate-fadeIn');
-    els.forEach((el, i) => {
-      el.style.opacity = 0;
-      el.style.transition = 'opacity .8s '+(0.3*i)+'s';
-    });
-    window.addEventListener('load', () => {
-      els.forEach(el => el.style.opacity = 1);
-    });
-  </script>
 </body>
 </html>
