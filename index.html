@@ -1,91 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Pranavi Rangapravesam</title>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pranavi | Kuchipudi | Portfolio</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    body {
-      background: url('background.png') no-repeat center center fixed;
-      background-size: cover;
-      font-family: 'Segoe UI', sans-serif;
-      color: #222;
+    body { scroll-behavior: smooth; }
+    .hero {
+      background: url('hero-bg.jpg') center/cover no-repeat;
+      height: 100vh;
+      position: relative;
     }
-
-    .backdrop {
-      backdrop-filter: blur(15px);
-      background: rgba(255, 255, 255, 0.75);
-      border-radius: 1.5rem;
-      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    .hero::before {
+      content:""; position:absolute; inset:0;
+      background:rgba(0,0,0,0.4);
     }
-
-    .fade-up {
-      opacity: 0;
-      animation: fadeUp 1s ease forwards;
+    .hero-content {
+      position:relative; z-index:1;
     }
-
-    @keyframes fadeUp {
-      0% { opacity: 0; transform: translateY(20px); }
-      100% { opacity: 1; transform: translateY(0); }
+    .gallery img {
+      transition: transform .3s;
     }
-
-    .shimmer {
-      background: linear-gradient(90deg, #f43f5e 0%, #f9a8d4 50%, #f43f5e 100%);
-      background-size: 200% auto;
-      color: transparent;
-      background-clip: text;
-      -webkit-background-clip: text;
-      animation: shimmer 3s linear infinite;
-    }
-
-    @keyframes shimmer {
-      0% { background-position: 200% center; }
-      100% { background-position: -200% center; }
-    }
-
-    a.button:hover {
+    .gallery img:hover {
       transform: scale(1.05);
-      box-shadow: 0 0 15px rgba(244, 63, 94, 0.6);
+      filter: brightness(1.1);
     }
   </style>
 </head>
-<body class="min-h-screen flex items-center justify-center px-4 py-10">
+<body class="text-gray-900 font-sans">
 
-  <div class="max-w-4xl backdrop p-8 md:p-12 fade-up">
-    <h1 class="text-5xl font-extrabold text-center shimmer mb-3">Sri Pranavi Chintalapudi</h1>
-    <h2 class="text-xl text-center text-gray-700 mb-6 italic">Rangapravesam | August 2025</h2>
-
-    <p class="mb-4 leading-relaxed">
-      Sri Pranavi Chintalapudi is a gifted Kuchipudi dancer, training for over 8 years under <strong>Smt. Preethi Tatambhotla</strong>. She has performed at renowned venues across India and the UAE — from <strong>Tirumala</strong> and <strong>Guruvayur</strong> to <strong>Chidambaram</strong> and international stages.
-    </p>
-
-    <p class="mb-4">
-      She’s won <strong>1st Prize</strong> in the <em>Virtual International Competition (Spring Nectar Foundation, USA)</em>, <em>Shobha Naidu Awards</em>, and bagged a <strong>Gold Medal</strong> at the <em>Indywood Talent Hunt International 2021</em>. She’s also taken center stage in lead roles of ballets choreographed by Tanmayi Art Studio.
-    </p>
-
-    <p class="mb-4">
-      Academically brilliant, she’s currently studying Engineering at <strong>BITS Pilani, Dubai Campus</strong>, after graduating from <em>GEMS Our Own English High School</em>.
-    </p>
-
-    <p class="mb-4">
-      Her talents extend to <strong>Carnatic vocal music</strong> (under <em>Smt. Gayatri Sriram</em>, <em>Smt. Poornima Rao</em>, <em>Smt. Prema Iyer</em>) and <strong>Carnatic violin</strong> under <em>Mr. Subramaniyam</em>. She has won awards at <em>Margazhi Utsavam</em>, <em>Sangeet Samrat</em>, and <em>Vivek 157</em>.
-    </p>
-
-    <p class="mb-4">
-      A language enthusiast, she’s also learning Sanskrit through <em>Samskritha Bharathi Institute LLC</em> and aced <strong>Pravesha</strong> & <strong>Parichaya Patralaya</strong> exams with First Class distinction.
-    </p>
-
-    <p class="mt-4 text-lg font-medium text-center">We warmly invite you to witness her Rangapravesam — a divine milestone of grace, rhythm, and passion.</p>
-
-    <div class="text-center mt-6">
-      <a href="#" class="button inline-block px-6 py-3 bg-rose-600 text-white text-lg rounded-full transition-transform duration-300">Join the Celebration</a>
+  <!-- NAVBAR -->
+  <nav class="fixed top-0 w-full bg-white bg-opacity-70 backdrop-blur z-10">
+    <div class="max-w-5xl mx-auto flex justify-between items-center p-4">
+      <a href="#hero" class="text-2xl font-bold text-rose-600">Pranavi</a>
+      <div class="space-x-6">
+        <a href="#about" class="hover:text-rose-600">About</a>
+        <a href="#arts" class="hover:text-rose-600">Artistry</a>
+        <a href="#gallery" class="hover:text-rose-600">Gallery</a>
+        <a href="#contact" class="hover:text-rose-600">Celebrate</a>
+      </div>
     </div>
-  </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero" class="hero flex items-center justify-center">
+    <div class="hero-content text-center text-white px-4">
+      <h1 class="text-5xl md:text-7xl font-bold mb-4 animate-fadeIn">Sri Pranavi Chintalapudi</h1>
+      <p class="text-xl md:text-2xl mb-8 animate-fadeIn delay-1">Kuchipudi Dancer | Rangapravesam Aug 2025</p>
+      <a href="#contact" class="px-8 py-3 bg-rose-500 hover:bg-rose-600 rounded-full font-medium transition animate-fadeIn delay-2">RSVP / Celebrate</a>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="py-16 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-4xl font-bold text-center mb-8">About Me</h2>
+      <p class="leading-relaxed mb-6">
+        I’m a seasoned Kuchipudi dancer with 8+ years of training under <strong>Smt. Preethi Tatambhotla</strong>. I've graced sacred stages like Tirumala, Guruvayur, and Chidambaram, and performed internationally across the UAE & USA.
+      </p>
+      <p class="leading-relaxed">
+        Winner of 1st Prize at the Virtual International Competition (Spring Nectar Foundation, USA), Shobha Naidu Awards, and Gold Medal at Indywood Talent Hunt International 2021. Featured in lead roles for ballets by Tanmayi Art Studio.
+      </p>
+    </div>
+  </section>
+
+  <!-- ARTISTRY -->
+  <section id="arts" class="py-16">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-4xl font-bold text-center mb-8">Artistry & Achievements</h2>
+      <ul class="list-disc list-inside space-y-3 leading-relaxed">
+        <li>🎓 Engineering student at BITS Pilani, Dubai after schooling at GEMS Dubai</li>
+        <li>🎵 Trained in Carnatic vocal music (trained under Smt. Gayatri Sriram, Poornima Rao, Prema Iyer)</li>
+        <li>🎻 Carnatic violin under Mr. Subramaniyam; 3rd Prize at Margazhi Utsavam</li>
+        <li>📜 Sanskrit scholar through Samskritha Bharathi Institute — cleared Pravesha & Parichaya Patralaya</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="gallery" class="py-16 bg-gray-50">
+    <div class="max-w-5xl mx-auto px-4">
+      <h2 class="text-4xl font-bold text-center mb-8">Gallery</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 gallery">
+        <img src="gallery/1.jpg" alt="Performance 1" class="rounded-lg"/>
+        <img src="gallery/2.jpg" alt="Performance 2" class="rounded-lg"/>
+        <img src="gallery/3.jpg" alt="Performance 3" class="rounded-lg"/>
+        <img src="gallery/4.jpg" alt="Performance 4" class="rounded-lg"/>
+        <img src="gallery/5.jpg" alt="Performance 5" class="rounded-lg"/>
+        <img src="gallery/6.jpg" alt="Performance 6" class="rounded-lg"/>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT/RVSP -->
+  <section id="contact" class="py-16">
+    <div class="max-w-3xl mx-auto px-4 text-center">
+      <h2 class="text-4xl font-bold mb-6">Celebrate With Us</h2>
+      <p class="mb-6">Come witness Pranavi’s Rangapravesam — an evening of grace, dedication, and artistry. RSVP now!</p>
+      <a href="https://forms.gle/your-rsvp-form" target="_blank" class="px-8 py-3 bg-rose-600 hover:bg-rose-700 text-white rounded-full font-medium transition">RSVP Here</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="py-6 bg-gray-100 text-center">
+    <p>&copy; 2025 Sri Pranavi Chintalapudi</p>
+  </footer>
 
   <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      document.querySelector('.fade-up').style.animationPlayState = 'running';
+    // subtle fadeIn on scroll
+    const els = document.querySelectorAll('.animate-fadeIn');
+    els.forEach((el, i) => {
+      el.style.opacity = 0;
+      el.style.transition = 'opacity .8s '+(0.3*i)+'s';
+    });
+    window.addEventListener('load', () => {
+      els.forEach(el => el.style.opacity = 1);
     });
   </script>
 </body>
