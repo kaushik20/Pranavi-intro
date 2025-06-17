@@ -6,26 +6,82 @@
   <title>Pranavi Rangapravesam</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
+    /* ANIMATIONS */
+    @keyframes fadeUp {
+      0% { opacity: 0; transform: translateY(30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    @keyframes shimmer {
+      0% { background-position: -500px 0; }
+      100% { background-position: 500px 0; }
+    }
+
     .fade-up {
       opacity: 0;
-      transform: translateY(20px);
       animation: fadeUp 1s ease-out forwards;
     }
 
-    @keyframes fadeUp {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+    .delay-1 { animation-delay: 0.3s; }
+    .delay-2 { animation-delay: 0.5s; }
+    .delay-3 { animation-delay: 0.7s; }
+
+    .floaty {
+      animation: float 3s ease-in-out infinite;
+    }
+
+    .shimmer-text {
+      background: linear-gradient(to right, #be185d, #f9a8d4, #be185d);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-size: 300% 100%;
+      animation: shimmer 4s linear infinite;
+    }
+
+    .btn-animate:hover {
+      transform: scale(1.05);
+      animation: pulse 1s infinite;
+    }
+
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(244, 63, 94, 0.6); }
+      70% { box-shadow: 0 0 0 10px rgba(244, 63, 94, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(244, 63, 94, 0); }
+    }
+
+    /* BACKGROUND PARTICLE EFFECT */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: radial-gradient(circle at 30% 30%, rgba(255, 182, 193, 0.3), transparent 40%),
+                  radial-gradient(circle at 70% 60%, rgba(255, 105, 180, 0.2), transparent 40%),
+                  radial-gradient(circle at 90% 20%, rgba(255, 240, 245, 0.25), transparent 30%);
+      animation: float 15s ease-in-out infinite alternate;
+      z-index: -1;
+    }
+
+    body {
+      background: linear-gradient(120deg, #fff0f5 0%, #ffe4e6 100%);
+      overflow-x: hidden;
     }
   </style>
 </head>
-<body class="bg-gradient-to-br from-pink-50 to-rose-100 text-gray-800 font-sans">
-  <div class="max-w-4xl mx-auto p-6 md:p-12">
-    <h1 class="text-4xl md:text-6xl font-bold text-center text-rose-700 mb-4 fade-up">Sri Pranavi Chintalapudi</h1>
-    <h2 class="text-xl md:text-2xl text-center text-gray-700 mb-8 fade-up" style="animation-delay: 0.2s;">Rangapravesam | August 2025</h2>
+<body class="text-gray-800 font-sans">
 
-    <div class="bg-white p-6 rounded-2xl shadow-lg fade-up" style="animation-delay: 0.4s;">
+  <div class="max-w-4xl mx-auto p-6 md:p-12">
+    <h1 class="text-4xl md:text-6xl font-bold text-center shimmer-text mb-4 floaty">Sri Pranavi Chintalapudi</h1>
+    <h2 class="text-xl md:text-2xl text-center text-gray-700 mb-10 fade-up delay-1">Rangapravesam | August 2025</h2>
+
+    <div class="bg-white bg-opacity-80 backdrop-blur-lg p-6 rounded-2xl shadow-xl fade-up delay-2">
       <p class="mb-4 leading-relaxed">
         Sri Pranavi Chintalapudi is a gifted Kuchipudi dancer, who has been pursuing her art with devotion for over eight years under the tutelage of <strong>Smt. Preethi Tatambhotla</strong>. From sacred temples like <strong>Tirumala</strong>, <strong>Guruvayur</strong>, and <strong>Chidambaram</strong>, to international platforms in the UAE and USA, she has carried forward the rich legacy of Indian classical dance.
       </p>
@@ -38,19 +94,28 @@
       <p class="mb-4">
         Her artistic talents extend beyond dance. She has trained in <strong>Carnatic vocal music</strong> under <em>Smt. Gayatri Sriram</em>, <em>Smt. Poornima Rao</em>, and <em>Smt. Prema Iyer</em>, and won accolades in events like <em>Margazhi Utsavam</em> and <em>Sangeet Samrat</em>. She’s also trained in <strong>Carnatic violin</strong> under <em>Mr. Subramaniyam</em>, earning distinction at <em>Margazhi Utsavam</em>.
       </p>
-      <p class="mb-4">
+      <p>
         A passionate language learner, she is studying Sanskrit through <em>Samskritha Bharathi Institute LLC</em>, having cleared the <strong>Pravesha</strong> and <strong>Parichaya Patralaya</strong> exams with First Class distinction.
       </p>
-      <p>
+      <p class="mt-4">
         With her Rangapravesam in August 2025, Pranavi marks a defining milestone in her dance journey, celebrating years of rigorous training, dedication, and soulful artistry.
       </p>
     </div>
 
-    <div class="text-center mt-10 fade-up" style="animation-delay: 0.6s;">
-      <a href="#" class="bg-rose-600 hover:bg-rose-700 text-white text-lg px-6 py-3 rounded-full shadow-md inline-block transition">
+    <div class="text-center mt-10 fade-up delay-3">
+      <a href="#" class="btn-animate bg-rose-600 hover:bg-rose-700 text-white text-lg px-6 py-3 rounded-full shadow-md inline-block transition duration-300">
         Celebrate with Us
       </a>
     </div>
   </div>
+
+  <script>
+    // Fade-up animation trigger on load
+    window.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.fade-up').forEach(el => {
+        el.style.animationPlayState = 'running';
+      });
+    });
+  </script>
 </body>
 </html>
