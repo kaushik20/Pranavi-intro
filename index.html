@@ -1,120 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Pranavi Rangapravesam</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    /* ANIMATIONS */
-    @keyframes fadeUp {
-      0% { opacity: 0; transform: translateY(30px); }
-      100% { opacity: 1; transform: translateY(0); }
+    body {
+      background: url('background.png') no-repeat center center fixed;
+      background-size: cover;
+      font-family: 'Segoe UI', sans-serif;
+      color: #222;
     }
 
-    @keyframes float {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-10px); }
-    }
-
-    @keyframes shimmer {
-      0% { background-position: -500px 0; }
-      100% { background-position: 500px 0; }
+    .backdrop {
+      backdrop-filter: blur(15px);
+      background: rgba(255, 255, 255, 0.75);
+      border-radius: 1.5rem;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
     }
 
     .fade-up {
       opacity: 0;
-      animation: fadeUp 1s ease-out forwards;
+      animation: fadeUp 1s ease forwards;
     }
 
-    .delay-1 { animation-delay: 0.3s; }
-    .delay-2 { animation-delay: 0.5s; }
-    .delay-3 { animation-delay: 0.7s; }
-
-    .floaty {
-      animation: float 3s ease-in-out infinite;
+    @keyframes fadeUp {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
     }
 
-    .shimmer-text {
-      background: linear-gradient(to right, #be185d, #f9a8d4, #be185d);
+    .shimmer {
+      background: linear-gradient(90deg, #f43f5e 0%, #f9a8d4 50%, #f43f5e 100%);
+      background-size: 200% auto;
+      color: transparent;
+      background-clip: text;
       -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-size: 300% 100%;
-      animation: shimmer 4s linear infinite;
+      animation: shimmer 3s linear infinite;
     }
 
-    .btn-animate:hover {
+    @keyframes shimmer {
+      0% { background-position: 200% center; }
+      100% { background-position: -200% center; }
+    }
+
+    a.button:hover {
       transform: scale(1.05);
-      animation: pulse 1s infinite;
-    }
-
-    @keyframes pulse {
-      0% { box-shadow: 0 0 0 0 rgba(244, 63, 94, 0.6); }
-      70% { box-shadow: 0 0 0 10px rgba(244, 63, 94, 0); }
-      100% { box-shadow: 0 0 0 0 rgba(244, 63, 94, 0); }
-    }
-
-    /* BACKGROUND PARTICLE EFFECT */
-    body::before {
-      content: "";
-      position: fixed;
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: 100%;
-      background: radial-gradient(circle at 30% 30%, rgba(255, 182, 193, 0.3), transparent 40%),
-                  radial-gradient(circle at 70% 60%, rgba(255, 105, 180, 0.2), transparent 40%),
-                  radial-gradient(circle at 90% 20%, rgba(255, 240, 245, 0.25), transparent 30%);
-      animation: float 15s ease-in-out infinite alternate;
-      z-index: -1;
-    }
-
-    body {
-      background: linear-gradient(120deg, #fff0f5 0%, #ffe4e6 100%);
-      overflow-x: hidden;
+      box-shadow: 0 0 15px rgba(244, 63, 94, 0.6);
     }
   </style>
 </head>
-<body class="text-gray-800 font-sans">
+<body class="min-h-screen flex items-center justify-center px-4 py-10">
 
-  <div class="max-w-4xl mx-auto p-6 md:p-12">
-    <h1 class="text-4xl md:text-6xl font-bold text-center shimmer-text mb-4 floaty">Sri Pranavi Chintalapudi</h1>
-    <h2 class="text-xl md:text-2xl text-center text-gray-700 mb-10 fade-up delay-1">Rangapravesam | August 2025</h2>
+  <div class="max-w-4xl backdrop p-8 md:p-12 fade-up">
+    <h1 class="text-5xl font-extrabold text-center shimmer mb-3">Sri Pranavi Chintalapudi</h1>
+    <h2 class="text-xl text-center text-gray-700 mb-6 italic">Rangapravesam | August 2025</h2>
 
-    <div class="bg-white bg-opacity-80 backdrop-blur-lg p-6 rounded-2xl shadow-xl fade-up delay-2">
-      <p class="mb-4 leading-relaxed">
-        Sri Pranavi Chintalapudi is a gifted Kuchipudi dancer, who has been pursuing her art with devotion for over eight years under the tutelage of <strong>Smt. Preethi Tatambhotla</strong>. From sacred temples like <strong>Tirumala</strong>, <strong>Guruvayur</strong>, and <strong>Chidambaram</strong>, to international platforms in the UAE and USA, she has carried forward the rich legacy of Indian classical dance.
-      </p>
-      <p class="mb-4">
-        A recipient of numerous accolades, including <strong>1st Prize</strong> at the <em>Virtual International Competition (Spring Nectar Foundation, USA)</em>, the <em>Shobha Naidu Awards</em>, and the <em>Indywood Talent Hunt Gold Medal</em>, Pranavi has also performed lead roles in prestigious ballets by Tanmayi Art Studio.
-      </p>
-      <p class="mb-4">
-        Academically, she is pursuing Engineering at <strong>BITS Pilani, Dubai Campus</strong>, after completing her schooling at <em>GEMS Our Own English High School, Dubai</em>.
-      </p>
-      <p class="mb-4">
-        Her artistic talents extend beyond dance. She has trained in <strong>Carnatic vocal music</strong> under <em>Smt. Gayatri Sriram</em>, <em>Smt. Poornima Rao</em>, and <em>Smt. Prema Iyer</em>, and won accolades in events like <em>Margazhi Utsavam</em> and <em>Sangeet Samrat</em>. She’s also trained in <strong>Carnatic violin</strong> under <em>Mr. Subramaniyam</em>, earning distinction at <em>Margazhi Utsavam</em>.
-      </p>
-      <p>
-        A passionate language learner, she is studying Sanskrit through <em>Samskritha Bharathi Institute LLC</em>, having cleared the <strong>Pravesha</strong> and <strong>Parichaya Patralaya</strong> exams with First Class distinction.
-      </p>
-      <p class="mt-4">
-        With her Rangapravesam in August 2025, Pranavi marks a defining milestone in her dance journey, celebrating years of rigorous training, dedication, and soulful artistry.
-      </p>
-    </div>
+    <p class="mb-4 leading-relaxed">
+      Sri Pranavi Chintalapudi is a gifted Kuchipudi dancer, training for over 8 years under <strong>Smt. Preethi Tatambhotla</strong>. She has performed at renowned venues across India and the UAE — from <strong>Tirumala</strong> and <strong>Guruvayur</strong> to <strong>Chidambaram</strong> and international stages.
+    </p>
 
-    <div class="text-center mt-10 fade-up delay-3">
-      <a href="#" class="btn-animate bg-rose-600 hover:bg-rose-700 text-white text-lg px-6 py-3 rounded-full shadow-md inline-block transition duration-300">
-        Celebrate with Us
-      </a>
+    <p class="mb-4">
+      She’s won <strong>1st Prize</strong> in the <em>Virtual International Competition (Spring Nectar Foundation, USA)</em>, <em>Shobha Naidu Awards</em>, and bagged a <strong>Gold Medal</strong> at the <em>Indywood Talent Hunt International 2021</em>. She’s also taken center stage in lead roles of ballets choreographed by Tanmayi Art Studio.
+    </p>
+
+    <p class="mb-4">
+      Academically brilliant, she’s currently studying Engineering at <strong>BITS Pilani, Dubai Campus</strong>, after graduating from <em>GEMS Our Own English High School</em>.
+    </p>
+
+    <p class="mb-4">
+      Her talents extend to <strong>Carnatic vocal music</strong> (under <em>Smt. Gayatri Sriram</em>, <em>Smt. Poornima Rao</em>, <em>Smt. Prema Iyer</em>) and <strong>Carnatic violin</strong> under <em>Mr. Subramaniyam</em>. She has won awards at <em>Margazhi Utsavam</em>, <em>Sangeet Samrat</em>, and <em>Vivek 157</em>.
+    </p>
+
+    <p class="mb-4">
+      A language enthusiast, she’s also learning Sanskrit through <em>Samskritha Bharathi Institute LLC</em> and aced <strong>Pravesha</strong> & <strong>Parichaya Patralaya</strong> exams with First Class distinction.
+    </p>
+
+    <p class="mt-4 text-lg font-medium text-center">We warmly invite you to witness her Rangapravesam — a divine milestone of grace, rhythm, and passion.</p>
+
+    <div class="text-center mt-6">
+      <a href="#" class="button inline-block px-6 py-3 bg-rose-600 text-white text-lg rounded-full transition-transform duration-300">Join the Celebration</a>
     </div>
   </div>
 
   <script>
-    // Fade-up animation trigger on load
-    window.addEventListener('DOMContentLoaded', () => {
-      document.querySelectorAll('.fade-up').forEach(el => {
-        el.style.animationPlayState = 'running';
-      });
+    document.addEventListener("DOMContentLoaded", () => {
+      document.querySelector('.fade-up').style.animationPlayState = 'running';
     });
   </script>
 </body>
