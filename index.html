@@ -143,6 +143,29 @@
          margin-bottom: 2rem;
          opacity: 0.8;
       }
+      .achievements-container {
+         display: flex;
+         gap: 1.5rem;
+         justify-content: center;
+         flex-wrap: wrap;
+      }
+      .achievement -item {
+         background: var(--card-bg);
+         border: 2px solid rgba(255, 255, 255, 0.2);
+         padding: 1.5rem;
+         width: 250px;
+         cursor: pointer;
+         position: relative;
+         border-radius: 8px;
+         text-align: center;
+         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+         transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .achievement -item:hover {
+         transform: scale(1.05);
+         box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+      }
       .achievements-list {
          text-align: left;
          max-width: 800px;
@@ -309,7 +332,7 @@
             </div>
             
             <div class="achievement-item">
-               <div class="achievement-list">
+               <div class="achievements-list">
                <h3>Carnatic Vocal Music</h3>
                <ul>
                   <li>2nd Prize - Margazhi Utsavam (Reha Music and Dance Institute)</li>
@@ -321,7 +344,7 @@
             </div>
             
             <div class="achivement-item">
-               <div class="achievement-list">
+               <div class="achievements-list">
                <h3>Sanskrit</h3>
                <ul>
                   <li>3rd Prize - Pravasha Patravalaya Samskritha Bharathi Institute LLC</li>
