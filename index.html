@@ -3,15 +3,15 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-   <meta name="description" content="Join us for Sri Pranavi Chintalapudi's Arangetram, a celebration of her Kuchipudi journey. Event details, RSVP, and gallery.">
-   <meta name="keywords" content="Arangetram, Kuchipudi, Indian Classical Dance, Pranavi Chintalapudi, Dance Performance, Cultural Event">
+   <meta name="description" content="Join us for Sri Pranavi Chintalapudi's Ranga Pravesam, a celebration of her Kuchipudi journey. Event details, RSVP, and gallery.">
+   <meta name="keywords" content="Ranga Pravesam, Kuchipudi, Indian Classical Dance, Pranavi Chintalapudi, Dance Performance, Cultural Event">
    <meta name="author" content="Pranavi Chintalapudi">
-   <meta property="og:title" content="Sri Pranavi Chintalapudi's Arangetram Celebration" />
+   <meta property="og:title" content="Sri Pranavi Chintalapudi's Ranga Pravesam Celebration" />
    <meta property="og:description" content="Celebrate Sri Pranavi Chintalapudi's Kuchipudi debut with us. RSVP and explore her dance journey." />
-   <meta property="og:url" content="https://pranavi-arangetram.github.io/" />
+   <meta property="og:url" content="https://pranavi-rangapravesam.github.io/" />
    <meta property="og:type" content="website" />
    <meta property="og:image" content="./Images/pranavi-hero.jpg" />
-   <title>Sri Pranavi Chintalapudi - Arangetram Celebration</title>
+   <title>Sri Pranavi Chintalapudi - Ranga Pravesam Celebration</title>
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
    <style>
       :root {
@@ -143,6 +143,27 @@
          margin-bottom: 2rem;
          opacity: 0.8;
       }
+      .achievements-list {
+         text-align: left;
+         max-width: 800px;
+         margin: 0 auto;
+         padding: 1rem;
+      }
+      .achievements-list h3 {
+         font-size: 1.5rem;
+         color: var(--button-bg);
+         margin-top: 1.5rem;
+         margin-bottom: 0.5rem;
+      }
+      .achievements-list ul {
+         list-style-type: disc;
+         padding-left: 2rem;
+         margin-bottom: 1.5rem;
+      }
+      .achievements-list ul li {
+         font-size: 1.1rem;
+         margin-bottom: 0.5rem;
+      }
       .gallery-grid {
          display: grid;
          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -227,12 +248,13 @@
    <header>
       <div class="logo">
          <a href="#hero">
-            <img src="./Images/arangetram-logo.png" alt="Pranavi Arangetram Logo">
+            <img src="./Images/rangapravesam-logo.png" alt="Pranavi Ranga Pravesam Logo">
          </a>
       </div>
       <nav class="nav-links">
          <a href="#hero" class="nav-item">Home</a>
          <a href="#about" class="nav-item">About</a>
+         <a href="#achievements" class="nav-item">Achievements</a>
          <a href="#event" class="nav-item">Event Details</a>
          <a href="#gallery" class="nav-item">Gallery</a>
          <a href="#rsvp" class="nav-item">RSVP</a>
@@ -246,7 +268,7 @@
                <img src="./Images/pranavi-hero.jpg" alt="Pranavi in Kuchipudi attire during practice" style="width: 200px; height: 200px; border-radius: 50%; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); margin-right: 2rem;">
             </div>
             <div style="max-width: 600px; text-align: left;">
-               <h1>Welcome to Sri Pranavi Chintalapudi's Arangetram</h1>
+               <h1>Welcome to Sri Pranavi Chintalapudi's Ranga Pravesam</h1>
                <p>Join us in celebrating Sri Pranavi Chintalapudi's Kuchipudi debut, a milestone in her 11-year journey of dedication and artistry. Witness the grace and storytelling of this ancient Indian dance form.</p>
                <div style="display: flex; gap: 1rem; margin-top: 2rem;">
                   <a href="#rsvp" class="cta-btn">RSVP Now</a>
@@ -258,11 +280,42 @@
       <section id="about" class="section">
          <h2>About Sri Pranavi Chintalapudi</h2>
          <p class="section-subtitle">Her journey in Kuchipudi and beyond</p>
-         <p>Sri Pranavi Chintalapudi began her Kuchipudi training at the age of 8 under the guidance of Smt. Preethi Tatambhotla. Over the past 11 years, she has performed at esteemed venues like Nadasneerajanam (Tirumala), Guruvayurappa Temple (Kerala), and Chidambaram Temple (Tamil Nadu). Pranavi has earned accolades such as 1st Prize at the Virtual International Competition (Spring Nectar Foundation, USA), 2nd Prize at Shobha Naidu Awards 2021, and a Gold Medal at Indywood Talent Hunt International 2021 (UAE). A versatile artist, she has been learning Carnatic vocal music since age 5 under Smt. Gayatri Sriram and Smt. Poorima Rao, and is currently under Smt. Prema Iyer. She also studies Carnatic violin and Sanskrit, and is pursuing an engineering diploma at BITS Pilani, Dubai Campus.</p>
+         <p>Sri Pranavi Chintalapudi began her Kuchipudi training at the age of 8 under the guidance of Smt. Preethi Tatambhotla. Over the past 11 years, she has performed at esteemed venues like Nadasneerajanam (Tirumala), Guruvayurappa Temple (Kerala), and Chidambaram Temple (Tamil Nadu). A versatile artist, she has been learning Carnatic vocal music since age 5 under Smt. Gayatri Sriram and Smt. Poorima Rao, and is currently under Smt. Prema Iyer. She also studies Carnatic violin and Sanskrit, and is pursuing an engineering diploma at BITS Pilani, Dubai Campus.</p>
          <div id="badge-container-about" class="badge-container">
             <div class="badge-content">
                <h3 class="badge-title">Welcome Badge</h3>
                <p class="badge-message">You've unlocked the Welcome Badge!</p>
+            </div>
+         </div>
+      </section>
+      <section id="achievements" class="section">
+         <h2>Achievements</h2>
+         <p class="section-subtitle">Celebrating Pranavi's accomplishments</p>
+         <div class="achievements-list">
+            <h3>Kuchipudi Dance</h3>
+            <ul>
+               <li>1st Prize - Virtual International Competition (Spring Nectar Foundation, USA), earning titles "Nritya Vismaya" and "Naatya Surabhi" at Devdasi Nritya Mandir, Orissa</li>
+               <li>2nd Prize - Shobha Naidu Awards 2021</li>
+               <li>Lead Roles - Kalyana Srinivasam and Navarasa Natabhamini ballets by Tanmayi Art Studio</li>
+               <li>Gold Medal (1st Prize) - Indywood Talent Hunt International 2021 (UAE)</li>
+               <li>Certified in Kuchipudi by the University of Silicon Andhra</li>
+            </ul>
+            <h3>Carnatic Vocal Music</h3>
+            <ul>
+               <li>2nd Prize - Margazhi Utsavam (Reha Music and Dance Institute)</li>
+               <li>3rd Prize - Sangeet Samrat 2018 (Vibgyor Live)</li>
+               <li>2nd Prize - Vivek 157 (Consulate General of India, Dubai)</li>
+               <li>Passed with First Class in Parambhikm Part 2 (Carnatic Music - Theory & Practical) from Pracheen Kala Kendra</li>
+            </ul>
+            <h3>Sanskrit</h3>
+            <ul>
+               <li>3rd Prize - Pravasha Patravalaya Samskritha Bharathi Institute LLC</li>
+            </ul>
+         </div>
+         <div id="badge-container-achievements" class="badge-container">
+            <div class="badge-content">
+               <h3 class="badge-title">Achievements Explorer Badge</h3>
+               <p class="badge-message">You've unlocked the Achievements Explorer Badge!</p>
             </div>
          </div>
       </section>
@@ -271,11 +324,11 @@
          <p class="section-subtitle">Join us for this special occasion</p>
          <p><strong>Date:</strong> July 15, 2025<br>
             <strong>Time:</strong> 6:00 PM IST<br>
-            <strong>Venue:</strong> Kalakshetra Auditorium, Chennai, Tamil Nadu<br>
+            <strong>Venue:</strong> Ravindra Bharati Auditorium, Hyderabad, Telangana<br>
             <strong>Dress Code:</strong> Traditional or Formal<br>
             <strong>Performance By:</strong> Sri Pranavi Chintalapudi<br>
             <strong>Guru:</strong> Smt. Preethi Tatambhotla</p>
-         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.998123456789!2d80.240438!3d13.033689!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5267d47c6f6e8f%3A0x1f0eabf0f7f0d4a!2sKalakshetra%20Foundation!5e0!3m2!1sen!2sin!4v1697500000000!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.664287345678!2d78.475694!3d17.428619!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb90b1b7d7a0a5%3A0x5c4e1a0f0d7b0a5!2sRavindra%20Bharati!5e0!3m2!1sen!2sin!4v1697500000000!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
          <div id="badge-container-event" class="badge-container">
             <div class="badge-content">
                <h3 class="badge-title">Event Explorer Badge</h3>
@@ -319,7 +372,7 @@
       <section id="guestbook" class="section">
          <h2>Guestbook</h2>
          <p class="section-subtitle">Leave a message for Pranavi</p>
-         <p>Share your wishes and thoughts for Pranavi's Arangetram. Your messages will be cherished!</p>
+         <p>Share your wishes and thoughts for Pranavi's Ranga Pravesam. Your messages will be cherished!</p>
          <a href="https://forms.gle/example-guestbook-form" target="_blank" class="cta-btn">Write a Message</a>
          <div id="badge-container-guestbook" class="badge-container">
             <div class="badge-content">
@@ -335,10 +388,10 @@
             <a href="https://wa.me/1234567890" target="_blank">Contact via WhatsApp</a>
          </div>
          <div class="contact-item">
-            <a href="mailto:pranavi.arangetram@example.com" target="_blank">pranavi.arangetram@example.com</a>
+            <a href="mailto:pranavi.rangapravesam@example.com" target="_blank">pranavi.rangapravesam@example.com</a>
          </div>
       </div>
-      <p>© <span id="current-year"></span> Sri Pranavi Chintalapudi's Arangetram. Crafted with love for a memorable celebration.</p>
+      <p>© <span id="current-year"></span> Sri Pranavi Chintalapudi's Ranga Pravesam. Crafted with love for a memorable celebration.</p>
    </footer>
    <script>
       document.addEventListener("DOMContentLoaded", () => {
@@ -352,6 +405,7 @@
          });
          const sectionsToGamify = [
             { id: "about", itemsClass: ".section", badgeId: "badge-container-about" },
+            { id: "achievements", itemsClass: ".section", badgeId: "badge-container-achievements" },
             { id: "event", itemsClass: ".section", badgeId: "badge-container-event" },
             { id: "gallery", itemsClass: ".gallery-item", badgeId: "badge-container-gallery" },
             { id: "rsvp", itemsClass: ".section", badgeId: "badge-container-rsvp" },
