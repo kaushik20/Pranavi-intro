@@ -9,8 +9,8 @@
     body {
       scroll-behavior: smooth;
     }
-    .hero {
-      background: url('hero.jpg') center/cover no-repeat;
+    .section {
+      padding: 6rem 1.25rem;
     }
     .gallery img {
       transition: transform 0.3s;
@@ -27,23 +27,25 @@
   </audio>
 
   <!-- Hero Section -->
-  <section class="hero h-screen flex flex-col justify-center items-center text-white text-center px-4" style="background-color: rgba(0,0,0,0.4); background-blend-mode: overlay;">
+  <section class="h-screen flex flex-col justify-center items-center text-white text-center px-4 bg-gradient-to-br from-rose-600 to-pink-400">
     <h1 class="text-5xl md:text-7xl font-bold mb-4">Sri Pranavi Chintalapudi</h1>
     <p class="text-xl md:text-2xl">Rangapravesam | August 2025</p>
-    <a href="#rsvp" class="mt-6 inline-block px-6 py-3 bg-rose-600 hover:bg-rose-700 rounded-full text-lg font-medium">Celebrate with Us</a>
+    <a href="#rsvp" class="mt-6 inline-block px-6 py-3 bg-white text-rose-600 hover:bg-gray-100 rounded-full text-lg font-medium">Celebrate with Us</a>
   </section>
 
   <!-- About Section -->
-  <section id="about" class="py-16 px-4 max-w-4xl mx-auto">
-    <h2 class="text-4xl font-bold mb-6 text-center">About</h2>
-    <p class="text-lg leading-relaxed">
-      Pranavi Chintalapudi is a passionate Kuchipudi dancer trained under Smt. Preethi Tatambhotla. With performances at revered venues such as Tirumala, Guruvayur, Chidambaram, and international stages, she has upheld the elegance of classical Indian dance. She is a recipient of top awards including the 1st Prize in the Spring Nectar International Competition and the Indywood Talent Hunt Gold Medal. She's currently pursuing Engineering at BITS Pilani, Dubai Campus.
-    </p>
+  <section id="about" class="section bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-4xl font-bold mb-6 text-center">About</h2>
+      <p class="text-lg leading-relaxed">
+        Pranavi Chintalapudi is a passionate Kuchipudi dancer trained under Smt. Preethi Tatambhotla. With performances at revered venues such as Tirumala, Guruvayur, Chidambaram, and international stages, she has upheld the elegance of classical Indian dance. She is a recipient of top awards including the 1st Prize in the Spring Nectar International Competition and the Indywood Talent Hunt Gold Medal. She's currently pursuing Engineering at BITS Pilani, Dubai Campus.
+      </p>
+    </div>
   </section>
 
   <!-- Achievements Section -->
-  <section id="achievements" class="bg-gray-50 py-16 px-4">
-    <div class="max-w-4xl mx-auto">
+  <section id="achievements" class="section bg-white">
+    <div class="max-w-4xl mx-auto px-4">
       <h2 class="text-4xl font-bold mb-6 text-center">Achievements</h2>
       <ul class="list-disc space-y-3 text-lg">
         <li>1st Prize – Spring Nectar Foundation (USA)</li>
@@ -56,8 +58,8 @@
   </section>
 
   <!-- Gallery Section -->
-  <section id="gallery" class="py-16 px-4">
-    <div class="max-w-6xl mx-auto">
+  <section id="gallery" class="section bg-gray-100">
+    <div class="max-w-6xl mx-auto px-4">
       <h2 class="text-4xl font-bold text-center mb-8">Gallery</h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 gallery">
         <img src="gallery1.jpg" alt="Gallery 1" class="rounded-lg shadow-md">
@@ -71,10 +73,12 @@
   </section>
 
   <!-- RSVP / Contact Section -->
-  <section id="rsvp" class="bg-rose-50 py-16 px-4 text-center">
-    <h2 class="text-4xl font-bold mb-6">Join the Celebration</h2>
-    <p class="text-lg mb-4">We warmly invite you to witness Pranavi’s Rangapravesam.</p>
-    <a href="https://forms.gle/your-form-link" target="_blank" class="px-6 py-3 bg-rose-600 hover:bg-rose-700 text-white text-lg rounded-full font-semibold">RSVP Now</a>
+  <section id="rsvp" class="section bg-gradient-to-tr from-rose-100 to-pink-200 text-center">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-4xl font-bold mb-6">Join the Celebration</h2>
+      <p class="text-lg mb-4">We warmly invite you to witness Pranavi’s Rangapravesam.</p>
+      <a href="https://forms.gle/your-form-link" target="_blank" class="px-6 py-3 bg-rose-600 hover:bg-rose-700 text-white text-lg rounded-full font-semibold">RSVP Now</a>
+    </div>
   </section>
 
   <!-- Footer with Venue/Date -->
