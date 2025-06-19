@@ -497,9 +497,8 @@
    </footer>
    <script>
       document.addEventListener("DOMContentLoaded", () => {
-         // Set current year in footer
          document.getElementById('current-year').textContent = new Date().getFullYear();
-         
+
          // Smooth scrolling for navigation links
          document.querySelectorAll("header .nav-links a").forEach(link => {
             link.addEventListener("click", (e) => {
@@ -508,7 +507,7 @@
                target.scrollIntoView({ behavior: "smooth" });
             });
          });
-         
+
          // Theme toggle functionality
          const themeToggle = document.getElementById('theme-toggle');
          themeToggle.addEventListener('click', () => {
@@ -518,7 +517,7 @@
             html.setAttribute('data-theme', newTheme);
             themeToggle.innerHTML = `<i class="fas fa-${newTheme === 'dark' ? 'moon' : 'sun'}"></i>`;
          });
-         
+
          // Gamification badges
          const sectionsToGamify = [
             { id: "about", itemsClass: ".section", badgeId: "badge-container-about" },
@@ -544,16 +543,8 @@
                      }, 3000);
                   }
                });
-            }
          });
-         
-         // Badge close button functionality
-         document.querySelectorAll('.badge-close').forEach(button => {
-            button.addEventListener('click', () => {
-               button.closest('.badge-container').style.display = 'none';
-            });
-         });
-         
+
          // RSVP form submission
          const rsvpForm = document.getElementById('rsvp-form');
          rsvpForm.addEventListener('submit', (e) => {
