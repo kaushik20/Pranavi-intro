@@ -61,7 +61,9 @@
          display: flex;
          justify-content: space-between;
          align-items: center;
-         z-index: Cummins: The header is fine as is, but consider using a fixed header for better visibility on long pages. 
+         z-index: 1000;
+         padding: 0 2rem;
+         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
       }
       header.scrolled {
          background: var(--header-scrolled-bg);
@@ -278,6 +280,25 @@
          cursor: pointer;
          color: var(--text-color);
       }
+      #back-to-top {
+         display: none;
+         position: fixed;
+         bottom: 20px;
+         right: 20px;
+         width: 50px;
+         height: auto;
+         background: none;
+         border: none;
+         cursor: pointer;
+         z-index: 1000;
+         transition: opacity var(--animation-duration) ease;
+      }
+      #back-to-top.visible {
+         display: block;
+      }
+      #back-to-top:hover {
+         opacity: 0.8;
+      }
       @keyframes gradientAnimation {
          0% { background-position: 0% 50%; }
          50% { background-position: 100% 50%; }
@@ -302,6 +323,9 @@
          #hero img {
             margin-right: 0;
             margin-bottom: 1rem;
+         }
+         #back-to-top {
+            width: 40px;
          }
       }
    </style>
@@ -468,7 +492,9 @@
             <a href="mailto:chintalapudi0602@gmail.com" target="_blank" aria-label="Email Pranavi">chintalapudi0602@gmail.com</a>
          </div>
       </div>
-      <p>© <span id="current-year"></span> Sri Pranavi Chintalapudi's Ranga Pravesam. Crafted with love for a memorable celebration.</p>
+      <button id="back-to-top" aria-label="Back to Top">
+        <p>© <span id="current-year"></span> Sri Pranavi Chintalapudi's Ranga Pravesam. Crafted with love for a memorable celebration.</p>
+       </button>
    </footer>
    <script>
       document.addEventListener("DOMContentLoaded", () => {
@@ -525,9 +551,21 @@
          const rsvpForm = document.getElementById('rsvp-form');
          rsvpForm.addEventListener('submit', (e) => {
             e.preventDefault();
-            // Simulate form submission (replace with actual Formspree submission)
             alert('RSVP submitted successfully!');
             rsvpForm.reset();
+         });
+
+         // Back to Top button functionality
+         const backToTop = document.getElementById('back-to-top');
+         window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+               backToTop.classList.add('visible');
+            } else {
+               backToTop.classList.remove('visible');
+            }
+         });
+         backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
          });
       });
    </script>
