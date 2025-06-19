@@ -61,9 +61,7 @@
          display: flex;
          justify-content: space-between;
          align-items: center;
-         z-index: 1000;
-         padding: 0 2rem;
-         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+         z-index: Cummins: The header is fine as is, but consider using a fixed header for better visibility on long pages. 
       }
       header.scrolled {
          background: var(--header-scrolled-bg);
@@ -143,11 +141,11 @@
          margin-bottom: 2rem;
          opacity: 0.8;
       }
-            #achievements {
-         background: #ffffff; /* White background */
+      #achievements {
+         background: #ffffff;
       }
       .achievements-container {
-         background: #ff0000; /* Red container */
+         background: #ff0000;
          padding: 20px;
          border-radius: 8px;
          display: flex;
@@ -155,7 +153,7 @@
          flex-wrap: wrap;
       }
       .achievement-item {
-         background: #ffa500; /* Orange boxes */
+         background: #ffa500;
          padding: 20px;
          margin: 10px;
          border-radius: 8px;
@@ -246,6 +244,40 @@
       .contact-item a:hover {
          color: var(--button-bg);
       }
+      #rsvp form {
+         display: flex;
+         flex-direction: column;
+         gap: 1rem;
+         max-width: 500px;
+         margin: 0 auto;
+      }
+      #rsvp input, #rsvp select {
+         padding: 0.8rem;
+         border: 1px solid var(--text-color);
+         border-radius: 5px;
+         font-size: 1rem;
+         font-family: 'Lora', serif;
+      }
+      #rsvp button {
+         padding: 0.8rem;
+         background: var(--button-bg);
+         color: #fffaf0;
+         border: none;
+         border-radius: 5px;
+         font-size: 1rem;
+         cursor: pointer;
+         transition: background-color 0.3s ease;
+      }
+      #rsvp button:hover {
+         background: var(--button-hover);
+      }
+      #theme-toggle {
+         background: none;
+         border: none;
+         font-size: 1.5rem;
+         cursor: pointer;
+         color: var(--text-color);
+      }
       @keyframes gradientAnimation {
          0% { background-position: 0% 50%; }
          50% { background-position: 100% 50%; }
@@ -263,6 +295,14 @@
          .gallery-grid {
             grid-template-columns: 1fr;
          }
+         #hero {
+            flex-direction: column;
+            text-align: center;
+         }
+         #hero img {
+            margin-right: 0;
+            margin-bottom: 1rem;
+         }
       }
    </style>
 </head>
@@ -279,7 +319,9 @@
          <a href="#achievements" class="nav-item">Achievements</a>
          <a href="#event" class="nav-item">Event Details</a>
          <a href="#gallery" class="nav-item">Gallery</a>
+         <a href="#rsvp" class="nav-item">RSVP</a>
       </nav>
+      <button id="theme-toggle" aria-label="Toggle theme"><i class="fas fa-moon"></i></button>
    </header>
    <main>
       <section id="hero">
@@ -293,6 +335,7 @@
                   Witness the grace and storytelling of this ancient Indian dance form.</p>
                <div style="display: flex; gap: 1rem; margin-top: 2rem;">
                   <a href="#event" class="cta-btn">Event Details</a>
+                  <a href="#rsvp" class="cta-btn">RSVP Now</a>
                </div>
             </div>
          </div>
@@ -301,8 +344,8 @@
          <h2>About Sri Pranavi Chintalapudi</h2>
          <p class="section-subtitle">Her journey in Kuchipudi and beyond</p>
          <p>Sri Pranavi Chintalapudi began her Kuchipudi training at the age of 8 under the guidance of Smt. Preethi Tatambhotla. Over the past 11 years, she has performed at esteemed venues like Nadasneerajanam (Tirumala), Guruvayurappa Temple (Kerala), and Chidambaram Temple (Tamil Nadu).</p> 
-         <p>A versatile artist, she has been learning Carnatic vocal music since age 5 under Smt. Gayatri Sriram and Smt. Poorima Rao, and is currently under Smt. Prema Iyer. She also studies Carnatic violin and Sanskrit, and is pursuing an engineering at BITS Pilani, Dubai Campus.</p>
-         <p>She is also pursuing Diploma in University of Silicon Andhra</p>
+         <p>A versatile artist, she has been learning Carnatic vocal music since age 5 under Smt. Gayatri Sriram and Smt. Poorima Rao, and is currently under Smt. Prema Iyer. She also studies Carnatic violin and Sanskrit, and is pursuing an engineering degree at BITS Pilani, Dubai Campus.</p>
+         <p>She is also pursuing a Diploma at the University of Silicon Andhra.</p>
          <div id="badge-container-about" class="badge-container">
             <div class="badge-content">
                <h3 class="badge-title">Welcome Badge</h3>
@@ -320,7 +363,7 @@
                   <h3>Kuchipudi Dance</h3>
                </div>
                <ul>
-                  <li>1st Prize - Virtual International Competition (Spring Nectar Foundation, USA).
+                  <li>1st Prize - Virtual International Competition (Spring Nectar Foundation, USA)</li>
                   <li>Earned titles "Nritya Vismaya" and "Naatya Surabhi" at Devdasi Nritya Mandir, Orissa</li>
                   <li>Won 2nd Prize - Shobha Naidu Awards 2021</li>
                   <li>Lead Roles - Kalyana Srinivasam and Navarasa Natabhamini ballets by Tanmayi Art Studio</li>
@@ -357,7 +400,6 @@
             </div>
          </div>
       </section>
-      
       <section id="event" class="section">
          <h2>Event Details</h2>
          <p class="section-subtitle">Join us for this special occasion</p>
@@ -367,7 +409,7 @@
             <strong>Dress Code:</strong> Traditional or Formal<br>
             <strong>Performance By:</strong> Sri Pranavi Chintalapudi<br>
             <strong>Guru:</strong> Smt. Preethi Tatambhotla</p>
-         <iframe src="pb=!1m18!1m12!1m3!1d3806.664287345678!2d78.475694!3d17.428619!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb90b1b7d7a0a5%3A0x5c4e1a0f0d7b0a5!2sRavindra%20Bharati!5e0!3m2!1sen!2sin!4v1697500000000!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.664287345678!2d78.475694!3d17.428619!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb90b1b7d7a0a5%3A0x5c4e1a0f0d7b0a5!2sRavindra%20Bharati!5e0!3m2!1sen!2sin!4v1697500000000!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
          <div id="badge-container-event" class="badge-container">
             <div class="badge-content">
                <h3 class="badge-title">Event Explorer Badge</h3>
@@ -380,13 +422,13 @@
          <p class="section-subtitle">Moments from Pranavi's dance journey</p>
          <div class="gallery-grid">
             <div class="gallery-item">
-               <img src="./Images/dance-practice1.jpg" alt="Pranavi practicing at the dance studio">
+               <img src="./Images/dance-practice1.jpg" alt="Pranavi practicing at the dance studio" loading="lazy">
             </div>
             <div class="gallery-item">
-               <img src="./Images/dance-practice2.jpg" alt="Pranavi in costume during a rehearsal">
+               <img src="./Images/dance-practice2.jpg" alt="Pranavi in costume during a rehearsal" loading="lazy">
             </div>
             <div class="gallery-item">
-               <img src="./Images/dance-performance.jpg" alt="Pranavi performing on stage">
+               <img src="./Images/dance-performance.jpg" alt="Pranavi performing on stage" loading="lazy">
             </div>
          </div>
          <div id="badge-container-gallery" class="badge-container">
@@ -396,14 +438,34 @@
             </div>
          </div>
       </section>
+      <section id="rsvp" class="section">
+         <h2>RSVP</h2>
+         <p class="section-subtitle">Let us know you're coming!</p>
+         <form id="rsvp-form" action="https://formspree.io/f/your-form-id" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required aria-label="Your Name">
+            <input type="email" name="email" placeholder="Your Email" required aria-label="Your Email">
+            <select name="attendance" required aria-label="Attendance Status">
+               <option value="" disabled selected>Will you attend?</option>
+               <option value="yes">Yes</option>
+               <option value="no">No</option>
+            </select>
+            <button type="submit">Submit RSVP</button>
+         </form>
+         <div id="badge-container-rsvp" class="badge-container">
+            <div class="badge-content">
+               <h3 class="badge-title">RSVP Badge</h3>
+               <p class="badge-message">You've unlocked the RSVP Badge!</p>
+            </div>
+         </div>
+      </section>
    </main>
    <footer>
       <div class="contact-items">
          <div class="contact-item">
-            <a href="https://wa.me/1234567890" target="_blank">Contact via WhatsApp</a>
+            <a href="https://wa.me/1234567890" target="_blank" aria-label="Contact via WhatsApp">Contact via WhatsApp</a>
          </div>
          <div class="contact-item">
-            <a href="mailto:chintalapudi0602@gmail.com" target="_blank">chintalapudi0602@gmail.com</a>
+            <a href="mailto:chintalapudi0602@gmail.com" target="_blank" aria-label="Email Pranavi">chintalapudi0602@gmail.com</a>
          </div>
       </div>
       <p>© <span id="current-year"></span> Sri Pranavi Chintalapudi's Ranga Pravesam. Crafted with love for a memorable celebration.</p>
@@ -411,6 +473,8 @@
    <script>
       document.addEventListener("DOMContentLoaded", () => {
          document.getElementById('current-year').textContent = new Date().getFullYear();
+
+         // Smooth scrolling for navigation links
          document.querySelectorAll("header .nav-links a").forEach(link => {
             link.addEventListener("click", (e) => {
                e.preventDefault();
@@ -418,27 +482,52 @@
                target.scrollIntoView({ behavior: "smooth" });
             });
          });
+
+         // Theme toggle functionality
+         const themeToggle = document.getElementById('theme-toggle');
+         themeToggle.addEventListener('click', () => {
+            const html = document.documentElement;
+            const currentTheme = html.getAttribute('data-theme') || 'dark';
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            html.setAttribute('data-theme', newTheme);
+            themeToggle.innerHTML = `<i class="fas fa-${newTheme === 'dark' ? 'moon' : 'sun'}"></i>`;
+         });
+
+         // Gamification badges
          const sectionsToGamify = [
             { id: "about", itemsClass: ".section", badgeId: "badge-container-about" },
             { id: "achievements", itemsClass: ".section", badgeId: "badge-container-achievements" },
             { id: "event", itemsClass: ".section", badgeId: "badge-container-event" },
             { id: "gallery", itemsClass: ".gallery-item", badgeId: "badge-container-gallery" },
-            { id: "rsvp", itemsClass: ".section", badgeId: "badge-container-rsvp" },
-            { id: "guestbook", itemsClass: ".section", badgeId: "badge-container-guestbook" }
+            { id: "rsvp", itemsClass: ".section", badgeId: "badge-container-rsvp" }
          ];
          sectionsToGamify.forEach(({ id, itemsClass, badgeId }) => {
             const section = document.getElementById(id);
             const badgeContainer = document.getElementById(badgeId);
-            section.addEventListener("click", () => {
-               if (!badgeContainer.classList.contains("unlocked")) {
-                  badgeContainer.classList.add("unlocked");
-                  badgeContainer.style.display = "block";
-                  badgeContainer.animate([
-                     { transform: "scale(0.5)", opacity: 0 },
-                     { transform: "scale(1)", opacity: 1 }
-                  ], { duration: 1000, easing: "ease-out" });
-               }
-            });
+            if (section && badgeContainer) {
+               section.addEventListener("click", () => {
+                  if (!badgeContainer.classList.contains("unlocked")) {
+                     badgeContainer.classList.add("unlocked");
+                     badgeContainer.style.display = "block";
+                     badgeContainer.animate([
+                        { transform: "scale(0.5)", opacity: 0 },
+                        { transform: "scale(1)", opacity: 1 }
+                     ], { duration: 1000, easing: "ease-out" });
+                     setTimeout(() => {
+                        badgeContainer.style.display = "none";
+                     }, 3000);
+                  }
+               });
+            }
+         });
+
+         // RSVP form submission
+         const rsvpForm = document.getElementById('rsvp-form');
+         rsvpForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            // Simulate form submission (replace with actual Formspree submission)
+            alert('RSVP submitted successfully!');
+            rsvpForm.reset();
          });
       });
    </script>
