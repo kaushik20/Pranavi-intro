@@ -69,7 +69,7 @@
          display: flex;
          justify-content: space-between;
          align-items: center;
-         z-index: Cummins: The header is fine as is, but consider using a fixed header for better visibility on long pages. 
+         z-index: 1000; 
       }
       header.scrolled {
          background: var(--header-scrolled-bg);
@@ -233,6 +233,16 @@
       .badge-message {
          font-size: 1rem;
       }
+      .badge-close {
+         position: absolute;
+         top: 10px;
+         right: 10px;
+         background: none;
+         border: none;
+         font-size: 1.2rem;
+         cursor: pointer;
+         color: var(--text-color)
+      }
       footer {
          background: var(--footer-bg-dark);
          color: var(--footer-text-dark);
@@ -358,6 +368,7 @@
             <div class="badge-content">
                <h3 class="badge-title">Welcome Badge</h3>
                <p class="badge-message">You've unlocked the Welcome Badge!</p>
+               <button class="badge-close" aria-label="Close badge">×</button>
             </div>
          </div>
       </section>
@@ -407,6 +418,7 @@
             <div class="badge-content">
                <h3 class="badge-title">Achievements Explorer Badge</h3>
                <p class="badge-message">You've unlocked the Achievements Explorer Badge!</p>
+               <button class="badge-close" aria-label="Close badge">×</button>
             </div>
          </div>
       </section>
@@ -424,6 +436,7 @@
             <div class="badge-content">
                <h3 class="badge-title">Event Explorer Badge</h3>
                <p class="badge-message">You've unlocked the Event Explorer Badge!</p>
+               <button class="badge-close" aria-label="Close badge">×</button>
             </div>
          </div>
       </section>
@@ -445,6 +458,7 @@
             <div class="badge-content">
                <h3 class="badge-title">Gallery Viewer Badge</h3>
                <p class="badge-message">You've unlocked the Gallery Viewer Badge!</p>
+               <button class="badge-close" aria-label="Close badge">×</button>
             </div>
          </div>
       </section>
@@ -465,6 +479,7 @@
             <div class="badge-content">
                <h3 class="badge-title">RSVP Badge</h3>
                <p class="badge-message">You've unlocked the RSVP Badge!</p>
+               <button class="badge-close" aria-label="Close badge">×</button>
             </div>
          </div>
       </section>
