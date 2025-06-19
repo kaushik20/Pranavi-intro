@@ -28,6 +28,10 @@
          --header-bg: rgba(44, 11, 14, 0.9);
          --header-scrolled-bg: rgba(44, 11, 14, 0.95);
          --animation-duration: 0.3s;
+         --achievement-container-bg: #f8f0e3; 
+         --achievement-item-bg: #fffaf0; 
+         --achievement-icon-color: var(--button-bg); 
+         --achievement-text-color: var(--text-color); 
       }
       [data-theme="light"] {
          --bg-color: #ffffff;
@@ -42,6 +46,10 @@
          --header-scrolled-bg: #ffffff;
          --footer-bg-dark: #f5e6cc;
          --footer-text-dark: #2c0b0e;
+         --achievement-container-bg: #e0e0e0;
+         --achievement-item-bg: #ffffff;
+         --achievement-icon-color: var(--button-bg);
+         --achievement-text-color: var(--text-color);
       }
       html, body {
          font-family: 'Lora', serif;
@@ -142,10 +150,10 @@
          opacity: 0.8;
       }
       #achievements {
-         background: #ffffff;
+         background: var(--achievement-container-bg);
       }
       .achievements-container {
-         background: #ff0000;
+         background: transparent;
          padding: 20px;
          border-radius: 8px;
          display: flex;
@@ -153,34 +161,34 @@
          flex-wrap: wrap;
       }
       .achievement-item {
-         background: #ffa500;
+         background: var(--achievement-item-bg);
          padding: 20px;
          margin: 10px;
          border-radius: 8px;
          width: 300px;
-         box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+         box-shadow: 0 4px 8px rgba(0,0,0,0.1);
       }
       .achievement-item .card-header {
          text-align: center;
       }
       .achievement-item i {
          font-size: 48px;
-         color: #ffffff;
+         color: var(--achievement-icon-color);
          margin-bottom: 10px;
       }
       .achievement-item h3 {
-         color: #ffffff;
+         color: var(--achievement-text-color);
          font-size: 24px;
          margin-bottom: 10px;
       }
       .achievement-item ul {
          list-style-type: disc;
-         color: #ffffff;
+         color: var(--achievement-text-color);
          padding-left: 20px;
          margin-top: 10px;
       }
       .achievement-item ul li {
-         color: #ffffff;
+         color: var(--achievement-text-color);
          font-size: 14px;
          margin-bottom: 5px;
       }
