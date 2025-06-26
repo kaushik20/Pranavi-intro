@@ -296,6 +296,33 @@
          cursor: pointer;
          color: var(--text-color);
       }
+      .footer-bar {
+         background-color: #121212; 
+         color: #ffffff; 
+         width: 100%; 
+         display: flex; 
+         justify-content: center; 
+         align-items: center; 
+         padding: 1rem 0; 
+         font-size: 0.9rem; 
+         border-top: 2px solid #4dabf7; 
+         text-align: center;
+      }
+      .footer-bar p {
+         margin: 0; 
+      }
+      .footer-bar button {
+         background: none; 
+         color: inherit; 
+         border: none; 
+         font-size: inherit; 
+         cursor: pointer; 
+         transition: color 0.3s ease, transform 0.3s ease; 
+      }
+      .footer-bar button:hover {
+         color: #4dabf7; 
+         transform: scale(1.05); 
+      }
       @keyframes gradientAnimation {
          0% { background-position: 0% 50%; }
          50% { background-position: 100% 50%; }
@@ -499,7 +526,11 @@
             <a href="mailto:chintalapudi0602@gmail.com" target="_blank" aria-label="Email Pranavi">chintalapudi0602@gmail.com</a>
          </div>
       </div>
-      <p>© <span id="current-year"></span> Sri Pranavi Chintalapudi's Ranga Pravesam. Crafted with love for a memorable celebration.</p>
+      <div class="footer-bar">
+         <p>
+            <button id="backToTop">© <span id="current-year"></span> Sri Pranavi Chintalapudi's Ranga Pravesam. Crafted with love for a memorable celebration.</button>
+         </p>
+      </div>
    </footer>
    <script>
       document.addEventListener("DOMContentLoaded", () => {
